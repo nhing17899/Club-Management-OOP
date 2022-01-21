@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-3">
+        <div class="card">
+            <img src="{{member.photoUrl || '../../../../../assets/user.png'}}" alt="{{member.knownAs}}" class="card-img-top img-thumbnail">
+            <div class="card-body">
+                <div>
+                    <p><strong>Name:</strong> {{member.knownAs}}</p>
+                </div>
+                <div>
+                    <p><strong>Team:</strong> {{member.team}}</p>
+                </div>
+                <div>
+                    <p><strong>Class:</strong> {{member.class}}</p>
+                </div>
+                <div>      
+                    <p><strong>Email:</strong> {{member.email}}</p>
+                </div>
+                <div>     
+                    <p><strong>Phone:</strong> {{member.phone}}</p>
+                </div>
+                <div>     
+                    <p><strong>Member since:</strong> {{member.created | date}}</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group d-flex">
+                    <button class="btn btn-primary">Assign task</button>
+                    <button (click)="selectTab(3)" class="btn btn-warning">Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <tabset class="member-tabset" #memberTabs>
+            <tab heading='About {{member.knownAs}}' (selectTab)="onTabActivated($event)">
+                <h4>Description</h4>
+                <p>{{member.introduction}}</p>
+            </tab>
+            <tab heading='Tasks' (selectTab)="onTabActivated($event)">
+                <h4>Tasks</h4>
+            </tab>
+            <tab heading='Photos' (selectTab)="onTabActivated($event)">
+                <ngx-gallery 
+                    [options]="galleryOptions" 
+                    [images]="galleryImages"
+                    style="display: inline-block; margin-bottom: 20px"
+                    ></ngx-gallery>
+            </tab>
+            <tab heading='Messages' (selectTab)="onTabActivated($event)">
+                <app-member-messages [messages]="messages" [username]="member.username"></app-member-messages>
+            </tab>
+        </tabset>
+    </div>
+</div>
