@@ -9,9 +9,6 @@
   * **C#**
     * ! remember: download .net 6.0.1 or later versions
   * **Angular Language Service**
-  * **.NET Core Tools**
-  * **NuGet Gallery**
-  * **SQLite**
 
 ## Install Guildlines:
 * Clone the project on GitHub
