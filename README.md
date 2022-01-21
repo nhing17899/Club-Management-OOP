@@ -2,7 +2,7 @@
 
 
 ## Download & install needed packages:
-* Set up general environment by download from VSCode extensions:
+* Set up general environment by downloading from VSCode extensions:
   * **C#**
     * ! remember: download .net 6.0.1 or later versions
   * **Angular Language Service**
