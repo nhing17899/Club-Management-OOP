@@ -1,5 +1,8 @@
 # Club-Management-OOP
 
+* This is a project to manage the club at school
+* Frontend: **Angular TypeScript**
+* Backend: **ASP.NET MVC**
 
 ## Download & install needed packages:
 * Set up general environment by downloading from VSCode extensions:
